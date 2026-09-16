@@ -1,6 +1,6 @@
-id: io.github.Big_Onche.Cube-Conflict
+id: com.cube_conflict.CubeConflict
 runtime: org.freedesktop.Platform
-runtime-version: '25.08'
+runtime-version: '26.08'
 sdk: org.freedesktop.Sdk
 command: cube-conflict
 finish-args:
@@ -32,11 +32,12 @@ modules:
     subdir: src
     post-install:
       - install -Dm755 ../cube-conflict.sh /app/bin/cube-conflict
-      - install -Dm755 ../bins/cc_client -t /app/share/cube-conflict/bins
       - install -Dm755 ../run.sh -t /app/share/cube-conflict
+      - install -Dm755 ../bins/cc_client -t /app/share/cube-conflict/bins
+      - install -Dm755 ../bins/cc_server -t /app/share/cube-conflict/bins
       - cp -a ../config ../media /app/share/cube-conflict
-      - install -Dm644 ../media/interface/cclogo.png /app/share/icons/hicolor/128x128/apps/${FLATPAK_ID}.png
-      - install -Dm644 ../io.github.Big_Onche.Cube-Conflict.desktop -t /app/share/applications
+      - install -Dm644 ../media/interface/cclogo.png /app/share/icons/hicolor/128x128/apps/com.cube_conflict.CubeConflict.png
+      - install -Dm644 ../com.cube_conflict.CubeConflict.desktop -t /app/share/applications
     sources:
       - type: git
         url: https://github.com/Big-Onche/Cube-Conflict.git
@@ -44,4 +45,4 @@ modules:
       - type: file
         path: cube-conflict.sh
       - type: file
-        path: io.github.Big_Onche.Cube-Conflict.desktop
+        path: com.cube_conflict.CubeConflict.desktop
