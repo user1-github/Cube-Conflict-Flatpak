@@ -2,7 +2,7 @@
 Type=Application
 Name=Cube Conflict
 Comment=FPS game involving smileys
-Icon=io.github.Big_Onche.Cube-Conflict
+Icon=com.cube_conflict.CubeConflict
 Exec=cube-conflict
 Categories=Game;ActionGame;Shooter;
 Keywords=fps;action;multiplayer;play;mapeditor;
