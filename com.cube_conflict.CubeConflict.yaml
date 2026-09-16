@@ -46,3 +46,7 @@ modules:
         path: cube-conflict.sh
       - type: file
         path: com.cube_conflict.CubeConflict.desktop
+      - type: shell
+        dest: src
+        commands:
+          - sed -i '/^override CXXFLAGS +=/s/$/ -std=gnu++17/' Makefile
